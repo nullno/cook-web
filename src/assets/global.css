@@ -1,0 +1,53 @@
+@import './normalize.css';
+
+.ant-input[type='color'] {
+  height: 21px;
+}
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-track {
+  width: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 5px;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+  min-height: 20px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+.loading-ready {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.cookApp {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

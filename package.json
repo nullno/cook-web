@@ -1,0 +1,37 @@
+{
+  "name": "cook-web",
+  "version": "0.1.0",
+  "description": "前端页快速搭建工具",
+  "dependencies": {
+    "ace-builds": "^1.5.2",
+    "ahooks": "^3.3.8",
+    "antd": "^4.20.5",
+    "idb-js": "^1.3.1",
+    "jszip": "^3.9.1",
+    "react": "^17.0.2",
+    "react-ace": "^10.1.0",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@iceworks/spec": "^1.0.0",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "eslint": "^7.30.0",
+    "ice.js": "^2.0.0",
+    "stylelint": "^13.7.2"
+  },
+  "scripts": {
+    "start": "icejs start",
+    "build": "icejs build",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nullno/cook-web.git"
+  },
+  "private": true,
+  "originTemplate": "@alifd/scaffold-simple"
+}

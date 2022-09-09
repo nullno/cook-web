@@ -1,0 +1,130 @@
+.page-board {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-bottom: 3px solid #409eff;
+  z-index: 999;
+  .page-list {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 0 5px;
+    margin-bottom: 0;
+    li {
+      max-width: 150px;
+      position: relative;
+      // height:25px;
+      margin: 0 30px;
+      background-color: #eaf0ff;
+      transition: margin-right 0.3s;
+      animation: fadeInUp 300ms both;
+      padding-right:20px;
+      & > div {
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+        // float: left;
+        color: #409eff;
+        border-radius: 5px 5px 0 0;
+        padding: 5px 5px;
+        cursor: pointer;
+        font-size: 14px;
+        i {
+          padding-right: 3px;
+        }
+        .page-del {
+          background-color: #ccc;
+          margin-left: 15px;
+          color: #fff;
+          width: 15px;
+          height: 15px;
+          line-height: 14px;
+          border-radius: 15px;
+          cursor: pointer;
+          position: absolute;
+          overflow: hidden;
+          right:3px;
+          top:6px;
+          i {
+            padding: 0;
+            font-size: 10px;
+            pointer-events: none;
+          }
+          &:hover {
+            background-color: #e94337;
+          }
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -40px;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-right-color: #eaf0ff;
+        border-bottom-color: #eaf0ff;
+        pointer-events: none;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -40px;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-left-color: #eaf0ff;
+        border-bottom-color: #eaf0ff;
+        pointer-events: none;
+      }
+      &.active {
+        background-color: #409eff;
+        div {
+          color: #fff;
+        }
+        z-index: 999 !important;
+        &:after {
+          border-right-color: #409eff;
+          border-bottom-color: #409eff;
+        }
+        &:before {
+          border-left-color: #409eff;
+          border-bottom-color: #409eff;
+        }
+      }
+      &.more {
+        margin-right: -8px;
+      }
+      &.removed {
+        animation: fadeOutDown 200ms both;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
